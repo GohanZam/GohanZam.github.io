@@ -38,7 +38,7 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            padding: 20px;
+            padding: 5px;
             background-color: white;
             position: sticky;
             top: 0;
@@ -53,7 +53,6 @@
             font-size: 1rem;
         }
 
-        /* Grid de Veteritarias */
         .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
 
@@ -81,7 +80,7 @@
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: var(--modal-overlay);
-            display: none; /* Oculto por defecto */
+            display: none;
             justify-content: center;
             align-items: center;
             z-index: 1000;
@@ -142,6 +141,8 @@
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Buscar laboratorio o zona...">
+    </div>
+    <div class="search-container">
         <select id="ratingFilter">
             <option value="0">Calificación (Todas)</option>
             <option value="5">Solo 5 estrellas</option>
@@ -163,7 +164,6 @@
     </div>
 
     <script>
-        // Datos extendidos basados en los objetivos del proyecto (Transparencia y Opiniones)
         const veterinarias = [
             {
                 id: 1,
@@ -330,7 +330,7 @@
                 `).join('')}
             `;
             modalOverlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Evita scroll al fondo
+            document.body.style.overflow = 'hidden';
         }
 
         // Cerrar modal
